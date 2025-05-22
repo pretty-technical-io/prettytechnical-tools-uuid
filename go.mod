@@ -1,4 +1,4 @@
-module gitlab.com/prettytechnical-tools/uuid
+module github.com/pretty-technical-io/prettytechnical-tools-uuid
 
 go 1.21.1
 
