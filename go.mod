@@ -3,8 +3,8 @@ module github.com/pretty-technical-io/prettytechnical-tools-uuid
 go 1.21.1
 
 require (
-	github.com/google/uuid v1.5.0
-	github.com/stretchr/testify v1.8.1
+	github.com/google/uuid v1.6.0
+	github.com/stretchr/testify v1.10.0
 )
 
 require (
