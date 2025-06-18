@@ -17,7 +17,7 @@ type UUID string
 
 // Generate generates a new UUID.
 func (u *UUID) Generate() error {
-	id, err := uuid.NewUUID()
+	id, err := uuid.NewV7()
 	if err != nil {
 		return ErrUUIDNotGenerated
 	}
@@ -44,7 +44,7 @@ func (u UUID) String() string {
 
 // New returns a new UUID.
 func New() (UUID, error) {
-	id, err := uuid.NewUUID()
+	id, err := uuid.NewV7()
 	if err != nil {
 		return "", ErrUUIDNotGenerated
 	}

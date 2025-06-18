@@ -11,7 +11,7 @@ This package makes use of the external package [google uuid](github.com/google/u
 
 ### Install
 
-`go get -u gitlab.com/prettytechnical-tools/uuid`
+`go get -u github.com/pretty-technical-io/prettytechnical-tools-uuid`
 
 ### Features
 
@@ -29,7 +29,7 @@ import (
 	"log"
 	"net/http"
 
-	"gitlab.com/prettytechnical-tools/uuid"
+	uuid "github.com/pretty-technical-io/prettytechnical-tools-uuid"
 )
 
 type Player struct {
@@ -41,7 +41,6 @@ func main() {
 	http.HandleFunc("/player", GetPLayerHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
-
 
 func GetPLayerHandler(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
@@ -55,17 +54,17 @@ func GetPLayerHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func getPlayer(_ context.Context) *Player {
-	//logic to get from database a player for example
+	// logic to get from database a player for example.
 	id, err := uuid.New()
 	if err != nil {
 		log.Fatal(err)
 		return nil
 	}
+
 	return &Player{
 		ID:   id,
 		Name: "player",
 	}
 }
-
 
 ```
